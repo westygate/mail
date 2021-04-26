@@ -1,0 +1,183 @@
+textarea {
+    min-height: 400px;
+}
+
+#menu-table {
+    width: 100%;
+    table-layout:fixed;
+}
+
+.select {
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#inbox {
+    border-bottom: solid red;
+}
+
+#menu {
+    width: 100%;
+    padding: 30px;
+}
+
+#compose {
+    background-color: white; /* Green */
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+    box-shadow: 0px 0px 4px grey;
+}
+
+#compose:hover {
+     background-color: lightgray;
+     box-shadow: 0px 0px 8px grey;
+}
+
+#compose:active, #compose:focus {
+  outline: none;
+}
+#compose::-moz-focus-inner {
+  border: 0;
+}
+
+#mainmenubtn {
+    border: none;
+}
+
+#mainmenubtn:hover {
+    cursor: pointer;
+}
+
+
+#mainmenubtn::after {
+   content: "▼";
+   font-size: 12px;
+}
+    
+#user-menu {
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+#dropdown {
+    display: none;
+    background-color: white;
+    min-width: 100px;
+    border: solid 1px lightgrey;
+}
+#dropdown a {
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    color: black;
+    text-align: center;
+}
+#user-menu:hover #dropdown {
+    display: block;
+}
+
+
+.select:hover {
+    cursor: pointer;
+}
+
+#emails-table {
+    box-sizing: border-box;
+    width: 100%;
+    table-layout:fixed;
+}
+
+.email {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    height: 50px;
+}
+
+.email:hover {
+    border: 1px solid #ccc;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    box-shadow: 0px 0px 5px grey;
+    -webkit-box-shadow: 0px 0px 5px grey;
+    -moz-box-shadow: 0px 0px 5px grey;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.subject-emails {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.timestamp-emails {
+    text-align: right;
+}
+
+
+
+#one-email-view {
+    margin: auto;
+    width: 60%;
+    margin-top: 50px;
+}
+
+
+#subject {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+#sender {
+    font-size: 16px;
+}
+
+#sender-and-time {
+    display: flex;
+    flex-direction: row;
+}
+
+#timestamp {
+    font-size: 14px;
+    color: grey;
+    flex-grow: 1;
+    text-align: right;
+}
+
+#recipients {
+    font-size: 14px;
+    color: grey;
+    margin-bottom: 5px;
+}
+
+#body {
+    font-size: 18px;
+}
+
+.email-btn {
+    background-color: lightgrey;
+    border-radius: 5px;
+    border: solid 1px grey;
+}
+
+#buttons-email {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#to_archived {
+    margin-right: 5px;
+}

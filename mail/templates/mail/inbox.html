@@ -1,0 +1,72 @@
+{% extends "mail/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+    <div id = "menu">
+        <button id="compose">Compose</button>
+    
+        <div id="user-menu">
+            <div id="mainmenubtn">{{ request.user.email }}</div>
+            <div id="dropdown">
+                <a href="{% url 'logout' %}">Log Out</a>
+            </div>
+        </div>
+    </div>
+
+  
+    <table id="menu-table">
+        <td>
+            <div class="select" id="inbox">Inbox</div>
+        </td>
+        <td>
+            <div class="select" id="sent">Sent</div>
+        </td>
+        <td>
+            <div class="select" id="archived">Archived</div>
+        </td>
+    </table>
+
+
+    <div id="emails-view">
+        <table id = "emails-table">    
+        </table>
+    </div>
+    
+    <div id="one-email-view">
+        <div class="email-item" id="subject"></div>
+        <div id="sender-and-time">
+            <div class="email-item" id="sender"></div>
+            <div class="email-item" id="timestamp"></div>
+        </div>
+        <div class="email-item" id="recipients"></div>
+        <div id="buttons-email">        
+            <button class="email-btn" id="to_archived">To Archive</button>
+            <button class="email-btn" id="reply">Reply</button>
+        </div>
+        <div class="email-item" id="body"></div>
+
+    </div>
+
+    <div id="compose-view">
+        <h3>New Email</h3>
+        <form id="compose-form">
+            <div class="form-group">
+                From: <input disabled  value="{{ request.user.email }}">
+            </div>
+            <div class="form-group">
+                To: <input id="compose-recipients" class="form-control">
+            </div>
+            <div class="form-group">
+                <input class="form-control" id="compose-subject" placeholder="Subject">
+            </div>
+            <textarea class="form-control" id="compose-body" placeholder="Body"></textarea>
+            <input type="button" class="btn btn-primary"  id="compose-submit" value="Submit" />
+        </form>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'mail/inbox.js' %}"></script>
+    <script src="{% static 'mail/style.js' %}"></script>
+{% endblock %}
